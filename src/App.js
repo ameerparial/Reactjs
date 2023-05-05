@@ -23,12 +23,12 @@ function App() {
   }
   return (
     <>
-      <h2 className='Task'>Task 1 Counter</h2>
+      <h2>Task 1 Counter</h2>
       <div className='Buttons'>
         <MyButton count={count} increaseCount={increaseValue} resetCount={resetValue} decreaseCount={decreaseValue}/>
       </div>
       <hr></hr>
-      <h2 className='Task'>Task 2 Render List</h2>
+      <h2>Task 2 Render List</h2>
       <ListItem list={list}/>
     </>
 
