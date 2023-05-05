@@ -1,4 +1,6 @@
 import './App.css';
+import ameer from './Images/ameer.png';
+import DisplayData from './Components/DisplayData';
 import MyButton from './Components/MyButton';
 import ListItem from './Components/RenderList';
 import { useState } from 'react';
@@ -30,6 +32,9 @@ function App() {
       <hr></hr>
       <h2>Task 2 Render List</h2>
       <ListItem list={list}/>
+      <hr></hr>
+      <h2>Task 3 Display Data using Class based component</h2>        
+      <DisplayData user={{name:'Ameer Hamza', image:ameer}}/>
     </>
 
   );
