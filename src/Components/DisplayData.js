@@ -14,6 +14,13 @@ class DisplayData extends React.Component{
         //Second way
         this.setState((data)=>data.image=next);
     }
+
+    changeImage = ()=>{
+        //First way
+        // this.setState({...this.state, image:next});
+        //Second way
+        this.setState((data)=>data.image=next);
+    }
     render(){
         return <>
         
