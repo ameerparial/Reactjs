@@ -5,13 +5,18 @@ import { useState } from 'react';
 function App() {
   const [count, setCount] = useState(0);
   function increaseValue(){
-    setCount(count+1);
+    if(count<50){
+      setCount(count+1);     
+    }
+    else{
+      alert('You have reached the maximum');
+    }
   }
   function resetValue(){
     setCount(0);
   }
   function decreaseValue(){
-    setCount(count-1);
+    count>=1?setCount(count-1):alert('You reached the minimum');
   }
   return (
     <div className='App'>
