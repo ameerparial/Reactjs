@@ -1,6 +1,8 @@
+import { useState } from "react";
 
 function ListItem({list}){
-    let totalBill = 0;
+    const [totalBill, setTotalBill] = useState(0);
+   
     
     const content = list.map((value, index)=>{
         return <li key={'item'+index}>{value['name']}
@@ -10,9 +12,9 @@ function ListItem({list}){
             <label>Add item to cart: <input type="checkbox" id={index} onChange={(e)=>{
                 const index = e.target.id;
                 if(e.target.checked)
-                    totalBill +=list[index].price;
+                    setTotalBill(totalBill+list[index].price);
                 else
-                    totalBill -=list[index].price;
+                    setTotalBill(totalBill-list[index].price);
                 
                 // e.target.checked?list[index].sold=true:list[index].sold=false;
             }}/></label>
@@ -23,11 +25,7 @@ function ListItem({list}){
             <ul>
                 {content}
             </ul>
-            <button onClick={()=>{
-                console.log({totalBill});
-                
-
-            }}>Calculate Bill</button>
+            <h4>Total Bill: {totalBill}</h4>
         </>
     );
 
