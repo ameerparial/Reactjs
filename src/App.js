@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 function App() {
   const [count, setCount] = useState(0);
-  const list = ['Apple', 'Banana', 'Mango', 'Pine Apple', 'Orange'];
+  const list = [['Apple', 100], ['Banana', 130], ['Mango', 280], ['Pine Apple', 520], ['Orange', 200]];
   function increaseValue(){
     if(count<50){
       setCount(count+1);     
